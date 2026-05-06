@@ -26,12 +26,11 @@
         <span class="sr-only">Apri menu</span>
       </button>
       <nav class="site-nav" id="site-menu" aria-label="Navigazione principale">
-        <a href="index.html">Home</a>
         <a href="palestra.html">La Palestra</a>
         <a href="corsi.html">Corsi &amp; Orari</a>
         <a href="abbonamenti.html" aria-current="page">Abbonamenti</a>
         <a href="contatti.html">Contatti</a>
-        <a class="button button-ghost nav-cta" href="#checkout">Scegli il piano</a>
+        <a class="button button-ghost nav-cta" href="contatti.html">Contattaci</a>
       </nav>
     </div>
   </header>
@@ -63,7 +62,6 @@
             <li>1 valutazione iniziale</li>
             <li>Accesso fascia completa</li>
           </ul>
-          <button class="button select-plan" type="button">Seleziona</button>
         </article>
 
         <article class="pricing-card featured" data-plan="Trimestrale" data-price="149">
@@ -77,7 +75,6 @@
             <li>2 corsi inclusi a settimana</li>
             <li>Check tecnico mensile</li>
           </ul>
-          <button class="button select-plan" type="button">Seleziona</button>
         </article>
 
         <article class="pricing-card" data-plan="Semestrale" data-price="279">
@@ -90,7 +87,6 @@
             <li>Corsi illimitati</li>
             <li>1 sessione coaching inclusa</li>
           </ul>
-          <button class="button select-plan" type="button">Seleziona</button>
         </article>
 
         <article class="pricing-card" data-plan="Annuale" data-price="499">
@@ -103,99 +99,13 @@
             <li>Corsi illimitati</li>
             <li>Priorita su eventi e promo</li>
           </ul>
-          <button class="button select-plan" type="button">Seleziona</button>
         </article>
       </div>
-    </section>
-
-    <section class="section checkout-section" id="checkout">
-      <div class="shell split-intro reveal">
-        <div>
-          <p class="eyebrow">Richiesta iscrizione</p>
-          <h2>Completa l'iscrizione in pochi minuti.</h2>
-        </div>
-        <p class="section-note">Scegli il piano, inserisci i tuoi dati e conferma. Ti contatteremo entro 24 ore per attivare il tuo abbonamento.</p>
-      </div>
-
-      <div class="shell checkout-layout" data-checkout>
-        <aside class="checkout-summary reveal">
-          <p class="summary-label">Piano selezionato</p>
-          <h3 data-summary-plan>Trimestrale</h3>
-          <p class="summary-price"><span data-summary-price>149</span> EUR</p>
-          <p class="summary-copy">Modifica la selezione in alto in qualsiasi momento prima della conferma.</p>
-          <ol class="step-list" aria-label="Fasi checkout">
-            <li class="is-current" data-step-indicator="1">1. Selezione</li>
-            <li data-step-indicator="2">2. Dati</li>
-            <li data-step-indicator="3">3. Conferma</li>
-          </ol>
-        </aside>
-
-        <div class="checkout-panel reveal-delayed">
-          <section class="checkout-step is-current" data-step="1">
-            <h3>1. Conferma piano</h3>
-            <p>Hai scelto il piano <strong data-inline-plan>Trimestrale</strong>. Procedi per inserire i tuoi dati e inviare la richiesta al nostro staff.</p>
-            <div class="step-actions">
-              <button class="button" type="button" data-next-step>Continua</button>
-            </div>
-          </section>
-
-          <section class="checkout-step" data-step="2">
-            <h3>2. Inserisci i tuoi dati</h3>
-            <form class="checkout-form" data-checkout-form>
-              <label>
-                Nome e cognome
-                <input type="text" name="fullName" placeholder="Mario Rossi" required>
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" placeholder="nome@email.it" required>
-              </label>
-              <label>
-                Telefono
-                <input type="tel" name="phone" placeholder="333 000 0000" required>
-              </label>
-              <label>
-                Obiettivo principale
-                <select name="goal">
-                  <option value="forza">Forza</option>
-                  <option value="dimagrimento">Dimagrimento</option>
-                  <option value="ricomposizione">Ricomposizione</option>
-                  <option value="benessere">Benessere generale</option>
-                </select>
-              </label>
-            </form>
-            <div class="step-actions">
-              <button class="button button-secondary" type="button" data-prev-step>Indietro</button>
-              <button class="button" type="button" data-next-step>Vai alla conferma</button>
-            </div>
-          </section>
-
-          <section class="checkout-step" data-step="3">
-            <h3>3. Conferma richiesta</h3>
-            <div class="payment-options">
-              <label class="payment-option">
-                <input type="radio" name="payment-demo" checked>
-                <span>Contatto dello staff</span>
-              </label>
-              <label class="payment-option">
-                <input type="radio" name="payment-demo">
-                <span>Stripe futuro</span>
-              </label>
-              <label class="payment-option">
-                <input type="radio" name="payment-demo">
-                <span>PayPal futuro</span>
-              </label>
-            </div>
-            <label>
-              Nota facoltativa
-              <input type="text" value="Vorrei iniziare questa settimana" aria-label="Nota facoltativa per l'iscrizione">
-            </label>
-            <div class="step-actions">
-              <button class="button button-secondary" type="button" data-prev-step>Indietro</button>
-              <button class="button" type="button" data-complete-checkout>Conferma richiesta</button>
-            </div>
-            <p class="checkout-result" data-checkout-result hidden>Richiesta inviata. Ti contatteremo entro 24 ore per completare l'attivazione del piano scelto.</p>
-          </section>
+      <div class="shell pricing-note reveal">
+        <p class="section-note">Per informazioni sugli abbonamenti e sulle promozioni attive, contattaci direttamente o passa in palestra.</p>
+        <div class="hero-actions">
+          <a class="button" href="contatti.html">Contattaci</a>
+          <a class="button button-secondary" href="tel:+390499601160">Chiama ora</a>
         </div>
       </div>
     </section>
@@ -206,6 +116,11 @@
       <div>
         <p class="footer-brand">Palestra Max Club Associazione Sportiva Dilettantistica</p>
         <p class="footer-copy">Hai domande sul piano giusto per te? Scrivici, ti aiutiamo a scegliere.</p>
+      </div>
+      <div>
+        <p class="footer-detail">Via Provinciale, 63, 35010 Campo San Martino PD</p>
+        <p class="footer-detail">Tel: <a href="tel:+390499601160">049 960 1160</a></p>
+        <p class="footer-detail">Lunedi - Sabato 06:00 - 22:00, Domenica 08:00 - 17:00</p>
       </div>
       <div>
         <a href="corsi.html">Corsi</a>

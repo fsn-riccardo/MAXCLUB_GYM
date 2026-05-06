@@ -103,12 +103,18 @@ button,
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.site-header.menu-open {
+  background: rgba(5, 5, 5, 0.98);
+}
+
 .nav-shell {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: var(--space-4);
   min-height: 5rem;
+  padding-block: 0.75rem;
 }
 
 .brand {
@@ -154,16 +160,16 @@ button,
 }
 
 .site-nav {
-  position: absolute;
-  inset: calc(100% + 0.75rem) 1rem auto 1rem;
+  position: static;
   display: none;
+  width: 100%;
   flex-direction: column;
   gap: 0.9rem;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 1.4rem;
-  background: rgba(17, 17, 17, 0.98);
-  box-shadow: var(--shadow);
+  padding: 1rem 0 0;
+  margin-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  box-shadow: none;
 }
 
 .site-nav.is-open {
@@ -438,6 +444,13 @@ textarea:focus-visible {
   margin-bottom: 0.45rem;
 }
 
+.site-footer {
+  background: #121212;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
 .footer-brand {
   margin: 0 0 0.25rem;
   font-family: "Teko", sans-serif;
@@ -447,6 +460,11 @@ textarea:focus-visible {
 
 .footer-copy {
   margin: 0;
+  color: var(--muted);
+}
+
+.footer-detail {
+  margin: 0 0 0.45rem;
   color: var(--muted);
 }
 
@@ -515,6 +533,14 @@ textarea:focus-visible {
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-bottom: var(--space-5);
+}
+
+.pricing-note {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.96) 0%, rgba(10, 10, 10, 0.98) 100%);
 }
 
 .filter-chip.is-active {
@@ -709,10 +735,12 @@ textarea {
   .site-nav {
     position: static;
     display: flex;
+    width: auto;
     flex-direction: row;
     align-items: center;
     gap: 1.1rem;
     padding: 0;
+    margin-top: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
