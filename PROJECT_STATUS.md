@@ -1,18 +1,18 @@
-# Project Status: Palestra MaxClub
+# Project Status: Palestra Max Club
 
 Leggere questo file all'inizio di ogni nuova sessione di lavoro e aggiornarlo alla fine di ogni milestone.
 
 ## Stato Generale
 - Stato: In corso
-- Fase attuale: Build iniziale multipagina mobile-first
-- Obiettivo corrente: consegnare una prima versione navigabile, SEO-ready e facilmente rifinibile con asset reali
+- Fase attuale: Rifinitura contenuti reali e asset visuali
+- Obiettivo corrente: consolidare una versione brandizzata con dati reali, immagini reali e UX piu credibile
 
 ## Decisioni Confermate
 - Direzione visiva: hardcore gym
-- Tema: dark minimal
+- Tema: nero dominante con testo bianco
 - Conversione primaria: portare visite in palestra
-- Checkout: simulato in 3 step
-- Contenuti attuali: placeholder realistici da sostituire in seguito
+- Checkout: richiesta iscrizione con predisposizione Stripe futura
+- Recensioni: usare le 5 recensioni Google fornite dal cliente
 
 ## File Chiave
 - `PRODUCT.md`: contesto prodotto e brand
@@ -29,24 +29,25 @@ Leggere questo file all'inizio di ogni nuova sessione di lavoro e aggiornarlo al
 - Inseriti placeholder SVG locali per hero, gallery e cover social
 - Attivate interazioni leggere: menu mobile, carosello, filtri corsi, checkout simulato e lazy map
 - Aggiunto workflow GitHub Actions per deploy automatico su GitHub Pages
+- Sostituiti i placeholder principali con logo reale e immagini reali in `assets`
+- Aggiornati testi di Home, Palestra, Corsi, Abbonamenti e Contatti
+- Inseriti telefono, indirizzo, orari reali e mappa Google visibile
+- Convertite le recensioni home in carosello automatico
+- Creati `.env`, `.env.example` e `.gitignore` per la futura integrazione Stripe
 
 ## Task In Corso
-- Rifinitura contenuti e futura sostituzione asset placeholder
+- Verifica finale visiva e sostituzione eventuali ultimi asset placeholder rimasti
 
 ## Prossimi Step
 - Verificare comportamento mobile e interazioni principali
-- Sostituire logo e immagini placeholder con asset reali della palestra
-- Aggiornare prezzi, corsi, orari, contatti e testimonianze con dati definitivi
-- Valutare integrazione checkout reale con Stripe o PayPal
+- Valutare integrazione checkout reale con Stripe o PayPal tramite backend o checkout hosted
 - Verificare l'attivazione del sito pubblico su GitHub Pages dopo il primo workflow
-- Sostituire contenuti demo quando arriveranno logo e foto reali
+- Rifinire SEO locale con eventuali keyword aggiuntive e metadati social aggiornati
 
 ## Placeholder Da Sostituire
-- Hero image e gallery palestra
-- Listino prezzi demo
-- Orari corsi demo
-- Contatti demo
-- Testimonianze demo
+- Prezzi abbonamenti se il listino definitivo cambia
+- Orari corsi se la griglia ufficiale cambia
+- Cover social se si decide di rigenerarla con foto reali
 
 ## Punto Di Ripartenza
 Se il lavoro si interrompe, ripartire da qui:
@@ -56,6 +57,6 @@ Se il lavoro si interrompe, ripartire da qui:
 4. Continuare dal primo task non completato
 
 ## Ultimo Aggiornamento
-- Timestamp logico: build iniziale completata
-- Ultima azione completata: configurato deploy automatico GitHub Pages via workflow
-- Prossima azione consigliata: controllare URL pubblico Pages e rifinire il contenuto definitivo
+- Timestamp logico: contenuti reali e asset brand integrati
+- Ultima azione completata: aggiornati testi, contatti, immagini reali, recensioni Google e tema nero/bianco
+- Prossima azione consigliata: controllare il sito in browser e, se approvato, pushare gli ultimi aggiornamenti su GitHub

@@ -1,12 +1,12 @@
-# Design Context: Palestra MaxClub
+# Design Context: Palestra Max Club
 
 ## Visual Direction
-Hardcore gym con estetica dark minimale. Il feeling deve ricordare una palestra seria, notturna, tecnica, ma controllata e premium. Nessun effetto vistoso gratuito, solo impatto visivo netto, contrasto alto e ritmo tipografico deciso.
+Hardcore gym con estetica nera minimale. Il feeling deve ricordare una palestra seria, notturna, tecnica, ma controllata e premium. Nessun effetto vistoso gratuito, solo impatto visivo netto, contrasto alto e ritmo tipografico deciso.
 
 ## Theme
-- Base scura con neutrali tinta carbone e grafite.
-- Testi avorio freddo, mai bianco puro.
-- Accenti metallici chiari e un tono gesso per highlight, bordi e CTA.
+- Base nera compatta con superfici antracite.
+- Testi bianchi ad alto contrasto.
+- Accenti bianchi e grigi chiari per highlight, bordi e CTA.
 
 ## Color System
 - Background principale: oklch(0.14 0.01 250)

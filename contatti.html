@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatti | Palestra MaxClub</title>
-  <meta name="description" content="Contatta Palestra MaxClub, chiama in un tap e apri la mappa solo quando serve grazie al lazy loading.">
-  <meta name="theme-color" content="#17181b">
+  <title>Contatti | Palestra Max Club</title>
+  <meta name="description" content="Contatta Palestra Max Club a Campo San Martino, chiama in un tap e trova la palestra sulla mappa.">
+  <meta name="theme-color" content="#050505">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
@@ -15,9 +15,9 @@
   <a class="skip-link" href="#main-content">Vai al contenuto</a>
   <header class="site-header">
     <div class="shell nav-shell">
-      <a class="brand" href="index.html" aria-label="Palestra MaxClub home">
-        <span class="brand-mark">MC</span>
-        <span class="brand-text">Palestra MaxClub</span>
+      <a class="brand" href="index.html" aria-label="Palestra Max Club home">
+        <img class="brand-logo" src="assets/LOGO_MAX.JPG" alt="Logo Palestra Max Club" width="96" height="96" loading="eager">
+        <span class="brand-text">Palestra Max Club</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
         <span></span>
@@ -31,7 +31,7 @@
         <a href="corsi.html">Corsi &amp; Orari</a>
         <a href="abbonamenti.html">Abbonamenti</a>
         <a href="contatti.html" aria-current="page">Contatti</a>
-        <a class="button button-ghost nav-cta" href="tel:+390000000000">Chiama ora</a>
+        <a class="button button-ghost nav-cta" href="tel:+390499601160">Chiama ora</a>
       </nav>
     </div>
   </header>
@@ -40,7 +40,7 @@
     <section class="page-hero shell reveal">
       <p class="eyebrow">Contatti</p>
       <h1>Prenota una visita, chiamaci o passa direttamente in palestra.</h1>
-      <p class="lead">I contatti qui sotto sono placeholder temporanei. La struttura e gia pronta per essere aggiornata con dati reali.</p>
+      <p class="lead">Siamo in Via Provinciale, 63 a Campo San Martino. Scrivici, chiamaci o apri la mappa per raggiungerci subito.</p>
     </section>
 
     <section class="section section-tight">
@@ -51,15 +51,15 @@
           <form class="contact-form">
             <label>
               Nome
-              <input type="text" placeholder="Il tuo nome">
+              <input type="text" placeholder="Il tuo nome" required>
             </label>
             <label>
               Email
-              <input type="email" placeholder="nome@email.it">
+              <input type="email" placeholder="nome@email.it" required>
             </label>
             <label>
               Messaggio
-              <textarea rows="5" placeholder="Vorrei prenotare una visita o chiedere informazioni sugli abbonamenti."></textarea>
+              <textarea rows="5" placeholder="Vorrei prenotare una visita o chiedere informazioni sugli abbonamenti." required></textarea>
             </label>
             <button class="button" type="submit">Invia richiesta</button>
           </form>
@@ -69,24 +69,23 @@
           <p class="eyebrow">Contatto diretto</p>
           <h2>Arriva al punto in un tocco</h2>
           <div class="contact-actions">
-            <a class="button" href="tel:+390000000000">Chiama MaxClub</a>
-            <a class="button button-secondary" href="mailto:info@maxclub-demo.it">Scrivi una email</a>
+            <a class="button" href="tel:+390499601160">Chiama MaxClub</a>
+            <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=Via+Provinciale,+63,+35010+Campo+San+Martino+PD" target="_blank" rel="noreferrer">Apri indicazioni</a>
           </div>
-          <p class="contact-copy">Telefono demo: +39 000 000 0000<br>Indirizzo demo: Via Example 24, Citta da aggiornare</p>
+          <p class="contact-copy">Telefono: 049 960 1160<br>Indirizzo: Via Provinciale, 63, 35010 Campo San Martino PD<br>Orari: Lunedi - Sabato 06:00 - 22:00, Domenica 08:00 - 17:00</p>
         </section>
       </div>
     </section>
 
     <section class="section">
-      <div class="shell map-panel reveal" data-map-panel>
+      <div class="shell map-panel reveal">
         <div>
           <p class="eyebrow">Dove siamo</p>
-          <h2>Mappa caricata solo quando serve.</h2>
-          <p>Per proteggere le performance mobile, l'iframe Google Maps parte solo su richiesta.</p>
+          <h2>Vieni a trovarci in palestra.</h2>
+          <p>Palestra Max Club Associazione Sportiva Dilettantistica si trova in Via Provinciale, 63 a Campo San Martino.</p>
         </div>
-        <button class="button" type="button" data-load-map>Carica la mappa</button>
-        <div class="map-frame" data-map-frame>
-          <p>La mappa verra caricata qui al click.</p>
+        <div class="map-frame">
+          <iframe title="Mappa Palestra Max Club" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Via%20Provinciale%2C%2063%2C%2035010%20Campo%20San%20Martino%20PD&z=15&output=embed"></iframe>
         </div>
       </div>
     </section>
@@ -95,8 +94,8 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <p class="footer-brand">Palestra MaxClub</p>
-        <p class="footer-copy">Contatti demo pronti per essere sostituiti con i dati reali.</p>
+        <p class="footer-brand">Palestra Max Club Associazione Sportiva Dilettantistica</p>
+        <p class="footer-copy">Passa in palestra, chiamaci o scrivici. Ti aspettiamo a Campo San Martino.</p>
       </div>
       <div>
         <a href="abbonamenti.html">Abbonamenti</a>

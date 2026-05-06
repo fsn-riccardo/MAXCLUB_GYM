@@ -1,7 +1,7 @@
-# Product Context: Palestra MaxClub
+# Product Context: Palestra Max Club
 
 ## Product Purpose
-Palestra MaxClub e un sito multipagina mobile-first pensato per trasformare visite da smartphone in visite fisiche in palestra. Il sito deve presentare l'ambiente, rendere chiari corsi e abbonamenti, e abbassare al minimo l'attrito verso prova, chiamata e visita in sede.
+Palestra Max Club e un sito multipagina mobile-first pensato per trasformare visite da smartphone in visite fisiche in palestra. Il sito deve presentare l'ambiente, rendere chiari corsi e abbonamenti, e abbassare al minimo l'attrito verso prova, chiamata e visita in sede.
 
 ## Users
 - Persone tra 18 e 45 anni che cercano una palestra moderna, intensa e ben attrezzata.

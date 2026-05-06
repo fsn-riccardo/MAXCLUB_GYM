@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
-  --bg: oklch(0.14 0.01 250);
-  --bg-alt: oklch(0.18 0.012 250);
-  --surface: oklch(0.2 0.015 250);
-  --surface-2: oklch(0.26 0.02 250);
-  --surface-3: oklch(0.3 0.02 250);
-  --text: oklch(0.94 0.01 95);
-  --muted: oklch(0.78 0.015 95);
-  --accent: oklch(0.88 0.03 85);
-  --accent-strong: oklch(0.74 0.028 85);
-  --line: oklch(0.34 0.02 250);
-  --shadow: 0 24px 60px color-mix(in oklab, var(--bg) 70%, black);
+  --bg: #050505;
+  --bg-alt: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #181818;
+  --surface-3: #202020;
+  --text: #ffffff;
+  --muted: #d3d3d3;
+  --accent: #ffffff;
+  --accent-strong: #f0f0f0;
+  --line: #2d2d2d;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   --radius-sm: 0.9rem;
   --radius-md: 1.3rem;
   --radius-lg: 2rem;
@@ -37,9 +37,7 @@ html {
 body {
   margin: 0;
   font-family: "Familjen Grotesk", sans-serif;
-  background:
-    radial-gradient(circle at top, color-mix(in oklab, var(--surface-2) 42%, transparent) 0%, transparent 38%),
-    linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 38%, var(--bg) 100%);
+  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 30%, #000000 100%);
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -93,16 +91,16 @@ button,
   padding: 0.75rem 1rem;
   border-radius: 0.9rem;
   background: var(--accent);
-  color: var(--bg);
+  color: #000000;
 }
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(16px);
-  background: color-mix(in oklab, var(--bg) 82%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--line) 75%, transparent);
+  backdrop-filter: blur(18px);
+  background: rgba(5, 5, 5, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-shell {
@@ -117,24 +115,21 @@ button,
   display: inline-flex;
   align-items: center;
   gap: 0.9rem;
-  font-weight: 700;
+  min-width: 0;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.8rem;
-  background: var(--accent);
-  color: var(--bg);
-  font-family: "Teko", sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.06em;
+.brand-logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #000000;
 }
 
 .brand-text {
   font-size: 0.95rem;
+  font-weight: 700;
   letter-spacing: 0.03em;
 }
 
@@ -167,7 +162,7 @@ button,
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 1.4rem;
-  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  background: rgba(17, 17, 17, 0.98);
   box-shadow: var(--shadow);
 }
 
@@ -203,7 +198,7 @@ button,
 
 .button {
   background: var(--accent);
-  color: var(--bg);
+  color: #000000;
 }
 
 .button-secondary,
@@ -222,12 +217,13 @@ button,
 .site-nav a:focus-visible,
 .nav-toggle:focus-visible,
 .filter-chip:focus-visible,
+.carousel-control:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   outline: none;
-  border-color: var(--accent-strong);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 28%, transparent);
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
 }
 
 .button:hover,
@@ -281,7 +277,12 @@ textarea:focus-visible {
 .feature-card p,
 .testimonial p,
 .plan-copy,
-.contact-copy {
+.contact-copy,
+.checkout-result,
+.summary-copy,
+.class-item p,
+.machine-card p,
+.map-panel p {
   max-width: 65ch;
   color: var(--muted);
 }
@@ -320,15 +321,22 @@ textarea:focus-visible {
 .plan-list li,
 .step-list li {
   padding: 0.6rem 0;
-  border-bottom: 1px solid color-mix(in oklab, var(--line) 75%, transparent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .hero-visual {
   position: relative;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: color-mix(in oklab, var(--surface-2) 74%, transparent);
+  background: var(--surface-2);
+  min-height: 22rem;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section {
@@ -346,7 +354,6 @@ textarea:focus-visible {
 }
 
 .feature-grid,
-.testimonial-grid,
 .pricing-grid,
 .machine-grid {
   display: grid;
@@ -361,10 +368,12 @@ textarea:focus-visible {
 .contact-card,
 .map-panel,
 .checkout-panel,
-.checkout-summary {
-  border: 1px solid var(--line);
+.checkout-summary,
+.spotlight-panel,
+.cta-band-inner {
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.96) 0%, rgba(10, 10, 10, 0.98) 100%);
 }
 
 .feature-card,
@@ -374,19 +383,14 @@ textarea:focus-visible {
 .contact-card,
 .map-panel,
 .checkout-panel,
-.checkout-summary {
+.checkout-summary,
+.spotlight-panel,
+.cta-band-inner {
   padding: clamp(1.1rem, 2.4vw, 1.5rem);
 }
 
 .highlight-section {
-  background: linear-gradient(180deg, transparent 0%, color-mix(in oklab, var(--surface) 50%, transparent) 100%);
-}
-
-.spotlight-panel {
-  padding: clamp(1.5rem, 3vw, 2rem);
-  border-radius: var(--radius-lg);
-  background: color-mix(in oklab, var(--surface-2) 80%, transparent);
-  border: 1px solid var(--line);
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.03) 100%);
 }
 
 .spotlight-meta {
@@ -420,16 +424,6 @@ textarea:focus-visible {
 
 .cta-band {
   padding-bottom: var(--space-9);
-}
-
-.cta-band-inner {
-  display: grid;
-  gap: var(--space-5);
-  align-items: center;
-  padding: clamp(1.5rem, 3vw, 2.2rem);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: color-mix(in oklab, var(--surface-2) 72%, transparent);
 }
 
 .footer-grid {
@@ -478,7 +472,9 @@ textarea:focus-visible {
 
 .carousel-slide img {
   border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  object-fit: cover;
 }
 
 .carousel-slide figcaption {
@@ -489,8 +485,8 @@ textarea:focus-visible {
 .carousel-control,
 .filter-chip,
 .payment-option {
-  border: 1px solid var(--line);
-  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(17, 17, 17, 0.96);
   color: var(--text);
 }
 
@@ -499,6 +495,19 @@ textarea:focus-visible {
   border-radius: 999px;
   min-height: 48px;
   padding: 0.8rem 1rem;
+}
+
+.review-carousel .testimonial {
+  min-height: 20rem;
+}
+
+.testimonial p {
+  font-size: 1.02rem;
+}
+
+.testimonial strong {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .filters {
@@ -510,7 +519,7 @@ textarea:focus-visible {
 
 .filter-chip.is-active {
   background: var(--accent);
-  color: var(--bg);
+  color: #000000;
   border-color: var(--accent);
 }
 
@@ -544,13 +553,10 @@ textarea:focus-visible {
   position: relative;
 }
 
-.pricing-card.featured {
-  background: color-mix(in oklab, var(--surface-2) 90%, transparent);
-}
-
+.pricing-card.featured,
 .pricing-card.is-selected {
-  border-color: var(--accent-strong);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 16%, transparent);
+  border-color: rgba(255, 255, 255, 0.36);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
 .plan-badge {
@@ -561,7 +567,7 @@ textarea:focus-visible {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
   background: var(--accent);
-  color: var(--bg);
+  color: #000000;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -599,10 +605,10 @@ input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
   padding: 0.9rem 1rem;
-  background: color-mix(in oklab, var(--surface-3) 74%, transparent);
+  background: rgba(32, 32, 32, 0.92);
   color: var(--text);
 }
 
@@ -638,7 +644,7 @@ textarea {
   margin: 0;
   padding: 1rem;
   border-radius: 1rem;
-  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .map-panel {
@@ -649,17 +655,15 @@ textarea {
 .map-frame {
   min-height: 18rem;
   display: grid;
-  place-items: center;
-  border: 1px dashed var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  color: var(--muted);
+  overflow: hidden;
 }
 
 .map-frame iframe {
   width: 100%;
   min-height: 18rem;
   border: 0;
-  border-radius: calc(var(--radius-md) - 0.2rem);
 }
 
 .reveal,
@@ -735,18 +739,7 @@ textarea {
     align-items: end;
   }
 
-  .hero-visual {
-    min-height: 38rem;
-  }
-
-  .hero-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .feature-grid,
-  .testimonial-grid,
   .machine-grid,
   .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -758,8 +751,7 @@ textarea {
 }
 
 @media (min-width: 72rem) {
-  .feature-grid,
-  .testimonial-grid {
+  .feature-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
