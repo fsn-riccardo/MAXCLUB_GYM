@@ -1,0 +1,10 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="720" rx="32" fill="#18191D"/>
+<rect x="60" y="72" width="1080" height="576" rx="24" stroke="#4B4F58"/>
+<rect x="154" y="172" width="194" height="332" rx="24" fill="#2A2D34"/>
+<rect x="404" y="172" width="194" height="332" rx="24" fill="#23262C"/>
+<rect x="654" y="172" width="194" height="332" rx="24" fill="#2A2D34"/>
+<rect x="904" y="172" width="142" height="332" rx="24" fill="#23262C"/>
+<path d="M120 580H1080" stroke="#DAD5C8" stroke-opacity="0.6" stroke-width="4" stroke-dasharray="8 16"/>
+<text x="120" y="626" fill="#EEE9DD" font-family="Arial, sans-serif" font-size="36" letter-spacing="4">AREA PRINCIPALE - PLACEHOLDER</text>
+</svg>

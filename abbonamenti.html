@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abbonamenti | Palestra MaxClub</title>
+  <meta name="description" content="Confronta gli abbonamenti di Palestra MaxClub e completa un checkout simulato in 3 step: selezione, dati e pagamento.">
+  <meta name="theme-color" content="#17181b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="index.html" aria-label="Palestra MaxClub home">
+        <span class="brand-mark">MC</span>
+        <span class="brand-text">Palestra MaxClub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Apri menu</span>
+      </button>
+      <nav class="site-nav" id="site-menu" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="palestra.html">La Palestra</a>
+        <a href="corsi.html">Corsi &amp; Orari</a>
+        <a href="abbonamenti.html" aria-current="page">Abbonamenti</a>
+        <a href="contatti.html">Contatti</a>
+        <a class="button button-ghost nav-cta" href="#checkout">Scegli il piano</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">Abbonamenti</p>
+      <h1>Quattro formule nette, una scelta semplice.</h1>
+      <p class="lead">Prezzi placeholder ottimizzati per confronto rapido su smartphone. Flusso di acquisto demo pensato per evolvere in Stripe o PayPal quando i dati reali saranno pronti.</p>
+    </section>
+
+    <section class="section section-tight">
+      <div class="shell split-intro reveal">
+        <div>
+          <p class="eyebrow">Confronto prezzi</p>
+          <h2>Scegli il ritmo con cui vuoi entrare in MaxClub.</h2>
+        </div>
+        <p class="section-note">La formula trimestrale e marcata come scelta preferita per guidare la conversione senza complicare il confronto.</p>
+      </div>
+
+      <div class="shell pricing-grid" data-plan-grid>
+        <article class="pricing-card" data-plan="Mensile" data-price="59">
+          <p class="plan-kicker">Ingresso rapido</p>
+          <h3>Mensile</h3>
+          <p class="plan-price">59<span>/mese</span></p>
+          <p class="plan-copy">Per chi vuole iniziare subito e testare il ritmo della palestra.</p>
+          <ul class="plan-list">
+            <li>Accesso sala pesi</li>
+            <li>1 valutazione iniziale</li>
+            <li>Accesso fascia completa</li>
+          </ul>
+          <button class="button select-plan" type="button">Seleziona</button>
+        </article>
+
+        <article class="pricing-card featured" data-plan="Trimestrale" data-price="149">
+          <p class="plan-badge">Piu scelto</p>
+          <p class="plan-kicker">Equilibrio ideale</p>
+          <h3>Trimestrale</h3>
+          <p class="plan-price">149<span>/3 mesi</span></p>
+          <p class="plan-copy">La scelta migliore per entrare nel ritmo, vedere risultati e fissare la routine.</p>
+          <ul class="plan-list">
+            <li>Accesso sala pesi</li>
+            <li>2 corsi inclusi a settimana</li>
+            <li>Check tecnico mensile</li>
+          </ul>
+          <button class="button select-plan" type="button">Seleziona</button>
+        </article>
+
+        <article class="pricing-card" data-plan="Semestrale" data-price="279">
+          <p class="plan-kicker">Commitment forte</p>
+          <h3>Semestrale</h3>
+          <p class="plan-price">279<span>/6 mesi</span></p>
+          <p class="plan-copy">Per chi vuole continuita, progressione e una spesa piu efficiente.</p>
+          <ul class="plan-list">
+            <li>Accesso completo</li>
+            <li>Corsi illimitati</li>
+            <li>1 sessione coaching inclusa</li>
+          </ul>
+          <button class="button select-plan" type="button">Seleziona</button>
+        </article>
+
+        <article class="pricing-card" data-plan="Annuale" data-price="499">
+          <p class="plan-kicker">Massima continuita</p>
+          <h3>Annuale</h3>
+          <p class="plan-price">499<span>/anno</span></p>
+          <p class="plan-copy">La formula piu forte per chi vuole fare della palestra una base stabile.</p>
+          <ul class="plan-list">
+            <li>Accesso completo</li>
+            <li>Corsi illimitati</li>
+            <li>Priorita su eventi e promo</li>
+          </ul>
+          <button class="button select-plan" type="button">Seleziona</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section checkout-section" id="checkout">
+      <div class="shell split-intro reveal">
+        <div>
+          <p class="eyebrow">Checkout simulato</p>
+          <h2>Selezione, dati, pagamento. Tre step, zero confusione.</h2>
+        </div>
+        <p class="section-note">Questa e una demo frontend. Nessun pagamento reale viene processato in questa fase.</p>
+      </div>
+
+      <div class="shell checkout-layout" data-checkout>
+        <aside class="checkout-summary reveal">
+          <p class="summary-label">Piano selezionato</p>
+          <h3 data-summary-plan>Trimestrale</h3>
+          <p class="summary-price"><span data-summary-price>149</span> EUR</p>
+          <p class="summary-copy">Modifica la selezione in alto in qualsiasi momento prima della conferma.</p>
+          <ol class="step-list" aria-label="Fasi checkout">
+            <li class="is-current" data-step-indicator="1">1. Selezione</li>
+            <li data-step-indicator="2">2. Dati</li>
+            <li data-step-indicator="3">3. Pagamento</li>
+          </ol>
+        </aside>
+
+        <div class="checkout-panel reveal-delayed">
+          <section class="checkout-step is-current" data-step="1">
+            <h3>1. Conferma piano</h3>
+            <p>Hai scelto il piano <strong data-inline-plan>Trimestrale</strong>. Procedi per inserire i tuoi dati e simulare la richiesta.</p>
+            <div class="step-actions">
+              <button class="button" type="button" data-next-step>Continua</button>
+            </div>
+          </section>
+
+          <section class="checkout-step" data-step="2">
+            <h3>2. Inserisci i tuoi dati</h3>
+            <form class="checkout-form" data-checkout-form>
+              <label>
+                Nome e cognome
+                <input type="text" name="fullName" placeholder="Mario Rossi" required>
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="nome@email.it" required>
+              </label>
+              <label>
+                Telefono
+                <input type="tel" name="phone" placeholder="333 000 0000" required>
+              </label>
+              <label>
+                Obiettivo principale
+                <select name="goal">
+                  <option value="forza">Forza</option>
+                  <option value="dimagrimento">Dimagrimento</option>
+                  <option value="ricomposizione">Ricomposizione</option>
+                  <option value="benessere">Benessere generale</option>
+                </select>
+              </label>
+            </form>
+            <div class="step-actions">
+              <button class="button button-secondary" type="button" data-prev-step>Indietro</button>
+              <button class="button" type="button" data-next-step>Vai al pagamento</button>
+            </div>
+          </section>
+
+          <section class="checkout-step" data-step="3">
+            <h3>3. Pagamento simulato</h3>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment-demo" checked>
+                <span>Carta</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment-demo">
+                <span>Stripe futuro</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment-demo">
+                <span>PayPal futuro</span>
+              </label>
+            </div>
+            <label>
+              Numero carta demo
+              <input type="text" value="4242 4242 4242 4242" inputmode="numeric" aria-label="Numero carta demo">
+            </label>
+            <div class="step-actions">
+              <button class="button button-secondary" type="button" data-prev-step>Indietro</button>
+              <button class="button" type="button" data-complete-checkout>Conferma richiesta</button>
+            </div>
+            <p class="checkout-result" data-checkout-result hidden>Richiesta simulata inviata. Nella versione reale qui entrera il checkout sicuro con provider di pagamento.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-brand">Palestra MaxClub</p>
+        <p class="footer-copy">Checkout demo pronto per futura integrazione Stripe o PayPal.</p>
+      </div>
+      <div>
+        <a href="corsi.html">Corsi</a>
+        <a href="palestra.html">La Palestra</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

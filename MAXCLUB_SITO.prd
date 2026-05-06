@@ -1,0 +1,104 @@
+# PRD: Sito Web Mobile-First per Palestra MaxClub
+
+## 1. Executive Summary
+
+**Problem Statement**: Palestra MaxClub necessita di una presenza web mobile-first che presenti struttura, corsi e abbonamenti in modo rapido, credibile e orientato alla visita in sede. Attualmente manca una base digitale leggera e ottimizzata per smartphone capace di convertire traffico locale in visite e richieste.
+
+**Proposed Solution**: Realizzare un sito multipagina statico leggero, dark-mode, SEO-ready e orientato alla conversione, con pagine dedicate a home, palestra, corsi, abbonamenti e contatti. La pagina Abbonamenti includera un checkout simulato a 3 step per validare il flusso prima di una futura integrazione reale con Stripe o PayPal.
+
+**Success Criteria**:
+- Lighthouse/PageSpeed mobile target >= 90 sulla maggior parte delle pagine statiche.
+- Tutte le CTA principali devono essere raggiungibili entro il primo scroll su smartphone.
+- Pagine core con heading semantici e meta description dedicate.
+- Flusso Abbonamenti completabile in 3 step senza ricaricare la pagina.
+- File di stato progetto aggiornato a ogni milestone per garantire continuita operativa.
+
+## 2. User Experience & Functionality
+
+**User Personas**:
+- Utente locale che cerca una palestra nelle vicinanze e valuta l'ambiente da smartphone.
+- Utente interessato ai corsi che vuole capire in fretta orari e tipologie.
+- Utente orientato al prezzo che vuole confrontare formule di abbonamento in modo chiaro.
+
+**User Stories**:
+- As a prospective member, I want to understand the gym's identity in a few seconds so that I can decide whether it is worth visiting.
+- As a mobile visitor, I want to browse courses and opening information without zooming so that I can act quickly from my phone.
+- As a price-conscious visitor, I want to compare plans and simulate checkout so that I can evaluate joining with confidence.
+- As a local prospect, I want to call or open directions in one tap so that I can visit the gym easily.
+
+**Acceptance Criteria**:
+- Home page includes hero, CTA primaria, benefits e testimonianze.
+- La Palestra page includes parco macchine e carosello immagini ottimizzato per swipe/click.
+- Corsi page includes filtri per tipologia e lista mobile-first.
+- Abbonamenti page includes 4 opzioni, badge "Piu scelto" e flusso Selezione > Dati > Pagamento.
+- Contatti page includes form rapido, click-to-call e mappa lazy-loaded.
+- Ogni pagina contiene title, meta description e struttura H1/H2/H3 corretta.
+
+**Non-Goals**:
+- CMS amministrativo.
+- Pagamento reale online in questa fase.
+- Area utente autenticata.
+- Gestione dinamica dei corsi da database.
+
+## 3. AI System Requirements (If Applicable)
+
+**Tool Requirements**:
+- Nessun sistema AI lato utente richiesto per l'MVP.
+- Uso della skill `impeccable` come metodologia di design e struttura del frontend.
+
+**Evaluation Strategy**:
+- Validare chiarezza visiva e gerarchia mobile.
+- Controllare peso e semplicita di CSS/JS.
+- Verificare presenza dei placeholder da sostituire con asset reali futuri.
+
+## 4. Technical Specifications
+
+**Architecture Overview**:
+- Sito statico multipagina composto da HTML semantico, un file CSS condiviso e un file JavaScript leggero.
+- Asset visuali temporanei in locale come placeholder SVG.
+- Script client-side per hamburger menu, carosello, filtri corsi, checkout simulato e lazy map.
+
+**Integration Points**:
+- Futuro inserimento Stripe o PayPal nella pagina Abbonamenti.
+- Futuro inserimento Google Maps con indirizzo reale.
+- Futuro popolamento con logo e fotografie della palestra.
+
+**Security & Privacy**:
+- Form di contatto solo dimostrativo lato frontend in questa fase.
+- Nessuna persistenza locale di dati sensibili.
+- Integrazioni reali di pagamento da introdurre solo con backend o provider checkout sicuro.
+
+## 5. Risks & Roadmap
+
+**Phased Rollout**:
+- MVP: sito statico multipagina completo con contenuti placeholder e checkout simulato.
+- v1.1: sostituzione contenuti placeholder con testi, logo, foto e dati reali della palestra.
+- v1.2: integrazione checkout reale, SEO locale completa, analytics e tracking conversioni.
+- v2.0: eventuale CMS leggero o gestione corsi dinamica.
+
+**Technical Risks**:
+- I placeholder possono influenzare il tono finale finche non arrivano asset e prezzi reali.
+- L'integrazione pagamento reale richiedera revisione UX, privacy e conformita.
+- Le prestazioni dipenderanno dall'ottimizzazione delle immagini reali che verranno caricate in seguito.
+
+## Struttura File Prevista
+- `index.html`
+- `palestra.html`
+- `corsi.html`
+- `abbonamenti.html`
+- `contatti.html`
+- `style.css`
+- `app.js`
+- `assets/`
+- `PRODUCT.md`
+- `DESIGN.md`
+- `MAXCLUB_SITO.prd`
+- `PROJECT_STATUS.md`
+
+## Content Placeholders To Replace Later
+- Logo ufficiale MaxClub
+- Foto reali palestra e parco macchine
+- Indirizzo reale, telefono, email e coordinate mappa
+- Listino abbonamenti definitivo
+- Orari corsi reali
+- Testimonianze reali clienti

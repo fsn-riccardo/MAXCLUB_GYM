@@ -1,0 +1,12 @@
+<svg width="960" height="1080" viewBox="0 0 960 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="1080" rx="40" fill="#18191D"/>
+<rect x="48" y="48" width="864" height="984" rx="28" stroke="#4F525A"/>
+<path d="M104 834C238 614 344 473 497 334C618 225 731 176 826 145" stroke="#DAD5C8" stroke-width="6" stroke-dasharray="10 18"/>
+<circle cx="728" cy="288" r="112" fill="#2B2E35"/>
+<circle cx="728" cy="288" r="62" fill="#DAD5C8" fill-opacity="0.08"/>
+<path d="M349 361C408 361 455 408 455 467V557H594C637 557 672 592 672 635V738H600V657H451V804H382V567C382 529 351 498 313 498H232V430H313C333 430 349 414 349 394V361Z" fill="#DAD5C8"/>
+<rect x="180" y="421" width="92" height="87" rx="18" fill="#7A7E86"/>
+<rect x="671" y="204" width="114" height="24" rx="12" fill="#DAD5C8" fill-opacity="0.75"/>
+<rect x="154" y="858" width="654" height="74" rx="18" fill="#23262C"/>
+<text x="194" y="905" fill="#EEE9DD" font-family="Arial, sans-serif" font-size="34" letter-spacing="5">MAXCLUB PLACEHOLDER HERO</text>
+</svg>

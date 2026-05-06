@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti | Palestra MaxClub</title>
+  <meta name="description" content="Contatta Palestra MaxClub, chiama in un tap e apri la mappa solo quando serve grazie al lazy loading.">
+  <meta name="theme-color" content="#17181b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="index.html" aria-label="Palestra MaxClub home">
+        <span class="brand-mark">MC</span>
+        <span class="brand-text">Palestra MaxClub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Apri menu</span>
+      </button>
+      <nav class="site-nav" id="site-menu" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="palestra.html">La Palestra</a>
+        <a href="corsi.html">Corsi &amp; Orari</a>
+        <a href="abbonamenti.html">Abbonamenti</a>
+        <a href="contatti.html" aria-current="page">Contatti</a>
+        <a class="button button-ghost nav-cta" href="tel:+390000000000">Chiama ora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">Contatti</p>
+      <h1>Prenota una visita, chiamaci o passa direttamente in palestra.</h1>
+      <p class="lead">I contatti qui sotto sono placeholder temporanei. La struttura e gia pronta per essere aggiornata con dati reali.</p>
+    </section>
+
+    <section class="section section-tight">
+      <div class="shell contact-layout">
+        <section class="contact-card reveal">
+          <p class="eyebrow">Richiedi informazioni</p>
+          <h2>Form rapido</h2>
+          <form class="contact-form">
+            <label>
+              Nome
+              <input type="text" placeholder="Il tuo nome">
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="nome@email.it">
+            </label>
+            <label>
+              Messaggio
+              <textarea rows="5" placeholder="Vorrei prenotare una visita o chiedere informazioni sugli abbonamenti."></textarea>
+            </label>
+            <button class="button" type="submit">Invia richiesta</button>
+          </form>
+        </section>
+
+        <section class="contact-card reveal-delayed">
+          <p class="eyebrow">Contatto diretto</p>
+          <h2>Arriva al punto in un tocco</h2>
+          <div class="contact-actions">
+            <a class="button" href="tel:+390000000000">Chiama MaxClub</a>
+            <a class="button button-secondary" href="mailto:info@maxclub-demo.it">Scrivi una email</a>
+          </div>
+          <p class="contact-copy">Telefono demo: +39 000 000 0000<br>Indirizzo demo: Via Example 24, Citta da aggiornare</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell map-panel reveal" data-map-panel>
+        <div>
+          <p class="eyebrow">Dove siamo</p>
+          <h2>Mappa caricata solo quando serve.</h2>
+          <p>Per proteggere le performance mobile, l'iframe Google Maps parte solo su richiesta.</p>
+        </div>
+        <button class="button" type="button" data-load-map>Carica la mappa</button>
+        <div class="map-frame" data-map-frame>
+          <p>La mappa verra caricata qui al click.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-brand">Palestra MaxClub</p>
+        <p class="footer-copy">Contatti demo pronti per essere sostituiti con i dati reali.</p>
+      </div>
+      <div>
+        <a href="abbonamenti.html">Abbonamenti</a>
+        <a href="corsi.html">Corsi</a>
+        <a href="palestra.html">La Palestra</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

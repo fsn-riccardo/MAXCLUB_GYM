@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corsi &amp; Orari | Palestra MaxClub</title>
+  <meta name="description" content="Consulta i corsi e gli orari di Palestra MaxClub con una lista filtrabile ottimizzata per smartphone.">
+  <meta name="theme-color" content="#17181b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="index.html" aria-label="Palestra MaxClub home">
+        <span class="brand-mark">MC</span>
+        <span class="brand-text">Palestra MaxClub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Apri menu</span>
+      </button>
+      <nav class="site-nav" id="site-menu" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="palestra.html">La Palestra</a>
+        <a href="corsi.html" aria-current="page">Corsi &amp; Orari</a>
+        <a href="abbonamenti.html">Abbonamenti</a>
+        <a href="contatti.html">Contatti</a>
+        <a class="button button-ghost nav-cta" href="contatti.html">Vieni a trovarci</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">Corsi &amp; Orari</p>
+      <h1>Trova il corso giusto senza tabelle impossibili da leggere.</h1>
+      <p class="lead">Lista verticale mobile-first con filtro rapido. Orari e descrizioni sono demo e potranno essere sostituiti con i dati reali della struttura.</p>
+    </section>
+
+    <section class="section section-tight">
+      <div class="shell filters reveal" data-filter-group>
+        <button class="filter-chip is-active" type="button" data-filter="all">Tutti</button>
+        <button class="filter-chip" type="button" data-filter="crossfit">Crossfit</button>
+        <button class="filter-chip" type="button" data-filter="yoga">Yoga</button>
+        <button class="filter-chip" type="button" data-filter="sala-pesi">Sala Pesi</button>
+        <button class="filter-chip" type="button" data-filter="functional">Functional</button>
+        <button class="filter-chip" type="button" data-filter="hiit">HIIT</button>
+        <button class="filter-chip" type="button" data-filter="mobility">Mobility</button>
+      </div>
+
+      <div class="shell class-list" data-filter-list>
+        <article class="class-item reveal" data-category="crossfit">
+          <div>
+            <p class="class-tag">Crossfit</p>
+            <h2>Crossfit Base</h2>
+            <p>Allenamento ad alta intensita per forza, tecnica e conditioning.</p>
+          </div>
+          <div class="class-meta">
+            <span>Lun / Mer / Ven</span>
+            <strong>07:00 - 08:00</strong>
+          </div>
+        </article>
+        <article class="class-item reveal-delayed" data-category="yoga">
+          <div>
+            <p class="class-tag">Yoga</p>
+            <h2>Yoga Reset</h2>
+            <p>Mobilita, respirazione e recupero per equilibrio e postura.</p>
+          </div>
+          <div class="class-meta">
+            <span>Mar / Gio</span>
+            <strong>13:00 - 14:00</strong>
+          </div>
+        </article>
+        <article class="class-item reveal" data-category="sala-pesi">
+          <div>
+            <p class="class-tag">Sala Pesi</p>
+            <h2>Strength Lab</h2>
+            <p>Sessione guidata per fondamentali, progressione e tecnica.</p>
+          </div>
+          <div class="class-meta">
+            <span>Lun / Gio</span>
+            <strong>18:00 - 19:00</strong>
+          </div>
+        </article>
+        <article class="class-item reveal-delayed" data-category="functional">
+          <div>
+            <p class="class-tag">Functional</p>
+            <h2>Functional Burn</h2>
+            <p>Lavoro metabolico e atletico tra stazioni, kettlebell e slitte.</p>
+          </div>
+          <div class="class-meta">
+            <span>Mar / Ven</span>
+            <strong>19:30 - 20:30</strong>
+          </div>
+        </article>
+        <article class="class-item reveal" data-category="hiit">
+          <div>
+            <p class="class-tag">HIIT</p>
+            <h2>HIIT Express</h2>
+            <p>Sessione rapida per chi vuole intensita e consumo in 45 minuti.</p>
+          </div>
+          <div class="class-meta">
+            <span>Lun / Mer</span>
+            <strong>12:45 - 13:30</strong>
+          </div>
+        </article>
+        <article class="class-item reveal-delayed" data-category="mobility">
+          <div>
+            <p class="class-tag">Mobility</p>
+            <h2>Mobility Flow</h2>
+            <p>Routine guidata per articolarita, range e prevenzione.</p>
+          </div>
+          <div class="class-meta">
+            <span>Sabato</span>
+            <strong>10:00 - 11:00</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-brand">Palestra MaxClub</p>
+        <p class="footer-copy">Corsi demo organizzati per lettura rapida da mobile.</p>
+      </div>
+      <div>
+        <a href="abbonamenti.html">Abbonamenti</a>
+        <a href="palestra.html">La Palestra</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

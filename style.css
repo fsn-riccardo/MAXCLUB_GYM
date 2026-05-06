@@ -1,0 +1,770 @@
+:root {
+  color-scheme: dark;
+  --bg: oklch(0.14 0.01 250);
+  --bg-alt: oklch(0.18 0.012 250);
+  --surface: oklch(0.2 0.015 250);
+  --surface-2: oklch(0.26 0.02 250);
+  --surface-3: oklch(0.3 0.02 250);
+  --text: oklch(0.94 0.01 95);
+  --muted: oklch(0.78 0.015 95);
+  --accent: oklch(0.88 0.03 85);
+  --accent-strong: oklch(0.74 0.028 85);
+  --line: oklch(0.34 0.02 250);
+  --shadow: 0 24px 60px color-mix(in oklab, var(--bg) 70%, black);
+  --radius-sm: 0.9rem;
+  --radius-md: 1.3rem;
+  --radius-lg: 2rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --shell: min(1120px, calc(100vw - 2rem));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Familjen Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at top, color-mix(in oklab, var(--surface-2) 42%, transparent) 0%, transparent 38%),
+    linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 38%, var(--bg) 100%);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+.button {
+  min-height: 48px;
+}
+
+.shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.skip-link,
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  clip-path: none;
+  inline-size: auto;
+  block-size: auto;
+  z-index: 10;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+  background: color-mix(in oklab, var(--bg) 82%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 75%, transparent);
+}
+
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-weight: 700;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.8rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: "Teko", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+}
+
+.brand-text {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 3rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 0.75rem;
+  background: transparent;
+  color: var(--text);
+}
+
+.nav-toggle span:not(.sr-only) {
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--text);
+}
+
+.site-nav {
+  position: absolute;
+  inset: calc(100% + 0.75rem) 1rem auto 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.site-nav.is-open {
+  display: flex;
+}
+
+.site-nav a {
+  color: var(--muted);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.nav-cta {
+  margin-top: 0.5rem;
+}
+
+.button,
+.button-secondary,
+.button-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.button {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.button-secondary,
+.button-ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.button:hover,
+.button-secondary:hover,
+.button-ghost:hover,
+.button:focus-visible,
+.button-secondary:focus-visible,
+.button-ghost:focus-visible,
+.site-nav a:focus-visible,
+.nav-toggle:focus-visible,
+.filter-chip:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 28%, transparent);
+}
+
+.button:hover,
+.button-secondary:hover,
+.button-ghost:hover {
+  transform: translateY(-1px);
+}
+
+.hero-section,
+.page-hero {
+  padding: clamp(3rem, 8vw, 6rem) 0 var(--space-7);
+}
+
+.hero-grid,
+.spotlight-grid,
+.contact-layout,
+.checkout-layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.hero-copy h1,
+.page-hero h1,
+.split-intro h2,
+.spotlight-panel h2,
+.cta-band-inner h2 {
+  margin: 0;
+  font-family: "Teko", sans-serif;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.page-hero h1 {
+  font-size: clamp(3.6rem, 14vw, 7.8rem);
+  max-width: 10ch;
+}
+
+.split-intro h2,
+.spotlight-panel h2,
+.cta-band-inner h2 {
+  font-size: clamp(2.6rem, 9vw, 4.8rem);
+  max-width: 11ch;
+}
+
+.lead,
+.section-note,
+.spotlight-panel p,
+.feature-card p,
+.testimonial p,
+.plan-copy,
+.contact-copy {
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+.eyebrow,
+.feature-index,
+.class-tag,
+.plan-kicker,
+.summary-label,
+.meta-label {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-actions,
+.contact-actions,
+.step-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-points,
+.plan-list,
+.step-list {
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-points li,
+.plan-list li,
+.step-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 75%, transparent);
+}
+
+.hero-visual {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: color-mix(in oklab, var(--surface-2) 74%, transparent);
+}
+
+.section {
+  padding: var(--space-7) 0;
+}
+
+.section-tight {
+  padding-top: 0;
+}
+
+.split-intro {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.feature-grid,
+.testimonial-grid,
+.pricing-grid,
+.machine-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.feature-card,
+.testimonial,
+.pricing-card,
+.machine-card,
+.class-item,
+.contact-card,
+.map-panel,
+.checkout-panel,
+.checkout-summary {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+}
+
+.feature-card,
+.testimonial,
+.pricing-card,
+.machine-card,
+.contact-card,
+.map-panel,
+.checkout-panel,
+.checkout-summary {
+  padding: clamp(1.1rem, 2.4vw, 1.5rem);
+}
+
+.highlight-section {
+  background: linear-gradient(180deg, transparent 0%, color-mix(in oklab, var(--surface) 50%, transparent) 100%);
+}
+
+.spotlight-panel {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--surface-2) 80%, transparent);
+  border: 1px solid var(--line);
+}
+
+.spotlight-meta {
+  display: grid;
+  gap: var(--space-4);
+  align-content: end;
+}
+
+.meta-value,
+.plan-price,
+.summary-price {
+  margin: 0;
+  font-family: "Teko", sans-serif;
+  font-size: clamp(2.6rem, 8vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.plan-price span,
+.summary-price span {
+  font-family: "Familjen Grotesk", sans-serif;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-left: 0.35rem;
+}
+
+.text-link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.cta-band {
+  padding-bottom: var(--space-9);
+}
+
+.cta-band-inner {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--surface-2) 72%, transparent);
+}
+
+.footer-grid {
+  display: grid;
+  gap: var(--space-4);
+  padding: 0 0 var(--space-6);
+}
+
+.site-footer a {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+.footer-brand {
+  margin: 0 0 0.25rem;
+  font-family: "Teko", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  margin: 0;
+  color: var(--muted);
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.carousel-track {
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  margin: 0;
+}
+
+.carousel-slide.is-active {
+  display: block;
+}
+
+.carousel-slide img {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+}
+
+.carousel-slide figcaption {
+  padding-top: 0.9rem;
+  color: var(--muted);
+}
+
+.carousel-control,
+.filter-chip,
+.payment-option {
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  color: var(--text);
+}
+
+.carousel-control,
+.filter-chip {
+  border-radius: 999px;
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-5);
+}
+
+.filter-chip.is-active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.class-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.class-item {
+  display: grid;
+  gap: var(--space-4);
+  padding: 1.2rem;
+}
+
+.class-item h2,
+.pricing-card h3,
+.checkout-panel h3,
+.contact-card h2,
+.machine-card h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+.class-meta {
+  display: grid;
+  gap: 0.3rem;
+  color: var(--muted);
+}
+
+.pricing-card {
+  position: relative;
+}
+
+.pricing-card.featured {
+  background: color-mix(in oklab, var(--surface-2) 90%, transparent);
+}
+
+.pricing-card.is-selected {
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 16%, transparent);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.checkout-layout {
+  align-items: start;
+}
+
+.checkout-step {
+  display: none;
+  gap: var(--space-5);
+}
+
+.checkout-step.is-current {
+  display: grid;
+}
+
+.checkout-form,
+.contact-form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.checkout-form label,
+.contact-form label,
+.checkout-step label {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+  background: color-mix(in oklab, var(--surface-3) 74%, transparent);
+  color: var(--text);
+}
+
+.step-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.step-list li {
+  border-bottom: 0;
+  color: var(--muted);
+}
+
+.step-list .is-current {
+  color: var(--text);
+}
+
+.payment-options {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: var(--space-5);
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.checkout-result {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+}
+
+.map-panel {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.map-frame {
+  min-height: 18rem;
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+  color: var(--muted);
+}
+
+.map-frame iframe {
+  width: 100%;
+  min-height: 18rem;
+  border: 0;
+  border-radius: calc(var(--radius-md) - 0.2rem);
+}
+
+.reveal,
+.reveal-delayed {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: rise 520ms ease forwards;
+}
+
+.reveal-delayed {
+  animation-delay: 100ms;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-delayed,
+  .button,
+  .button-secondary,
+  .button-ghost {
+    animation: none;
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 48rem) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-cta {
+    margin-top: 0;
+    margin-left: 0.5rem;
+  }
+
+  .hero-grid,
+  .spotlight-grid,
+  .contact-layout,
+  .checkout-layout,
+  .cta-band-inner,
+  .split-intro,
+  .footer-grid,
+  .class-item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-grid {
+    align-items: end;
+  }
+
+  .hero-visual {
+    min-height: 38rem;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feature-grid,
+  .testimonial-grid,
+  .machine-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .checkout-layout {
+    grid-template-columns: minmax(18rem, 22rem) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 72rem) {
+  .feature-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .machine-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

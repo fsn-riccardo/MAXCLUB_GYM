@@ -1,0 +1,14 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="720" rx="32" fill="#18191D"/>
+<rect x="82" y="92" width="1036" height="536" rx="22" stroke="#4B4F58"/>
+<rect x="180" y="160" width="42" height="380" rx="12" fill="#DAD5C8"/>
+<rect x="356" y="160" width="42" height="380" rx="12" fill="#DAD5C8"/>
+<rect x="532" y="160" width="42" height="380" rx="12" fill="#DAD5C8"/>
+<rect x="708" y="160" width="42" height="380" rx="12" fill="#DAD5C8"/>
+<rect x="884" y="160" width="42" height="380" rx="12" fill="#DAD5C8"/>
+<rect x="146" y="192" width="286" height="18" rx="9" fill="#2E323A"/>
+<rect x="498" y="192" width="286" height="18" rx="9" fill="#2E323A"/>
+<rect x="850" y="192" width="108" height="18" rx="9" fill="#2E323A"/>
+<rect x="150" y="560" width="900" height="12" rx="6" fill="#2E323A"/>
+<text x="122" y="626" fill="#EEE9DD" font-family="Arial, sans-serif" font-size="36" letter-spacing="4">ZONA RACK E FORZA - PLACEHOLDER</text>
+</svg>

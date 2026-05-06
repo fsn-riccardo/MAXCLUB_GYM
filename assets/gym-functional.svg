@@ -1,0 +1,10 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="720" rx="32" fill="#18191D"/>
+<rect x="72" y="88" width="1056" height="544" rx="22" stroke="#4B4F58"/>
+<circle cx="270" cy="302" r="92" fill="#2B2E35"/>
+<circle cx="522" cy="302" r="92" fill="#23262C"/>
+<circle cx="774" cy="302" r="92" fill="#2B2E35"/>
+<rect x="894" y="202" width="120" height="220" rx="22" fill="#23262C"/>
+<path d="M174 504L1016 504" stroke="#DAD5C8" stroke-width="4" stroke-dasharray="8 16"/>
+<text x="126" y="580" fill="#EEE9DD" font-family="Arial, sans-serif" font-size="36" letter-spacing="4">AREA FUNCTIONAL - PLACEHOLDER</text>
+</svg>
