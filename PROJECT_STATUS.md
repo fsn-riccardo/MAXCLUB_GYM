@@ -28,6 +28,7 @@ Leggere questo file all'inizio di ogni nuova sessione di lavoro e aggiornarlo al
 - Creata la prima build frontend completa con `index.html`, `palestra.html`, `corsi.html`, `abbonamenti.html`, `contatti.html`, `style.css` e `app.js`
 - Inseriti placeholder SVG locali per hero, gallery e cover social
 - Attivate interazioni leggere: menu mobile, carosello, filtri corsi, checkout simulato e lazy map
+- Aggiunto workflow GitHub Actions per deploy automatico su GitHub Pages
 
 ## Task In Corso
 - Rifinitura contenuti e futura sostituzione asset placeholder
@@ -37,6 +38,7 @@ Leggere questo file all'inizio di ogni nuova sessione di lavoro e aggiornarlo al
 - Sostituire logo e immagini placeholder con asset reali della palestra
 - Aggiornare prezzi, corsi, orari, contatti e testimonianze con dati definitivi
 - Valutare integrazione checkout reale con Stripe o PayPal
+- Verificare l'attivazione del sito pubblico su GitHub Pages dopo il primo workflow
 - Sostituire contenuti demo quando arriveranno logo e foto reali
 
 ## Placeholder Da Sostituire
@@ -55,5 +57,5 @@ Se il lavoro si interrompe, ripartire da qui:
 
 ## Ultimo Aggiornamento
 - Timestamp logico: build iniziale completata
-- Ultima azione completata: prima versione multipagina navigabile pubblicata nel workspace
-- Prossima azione consigliata: sostituire placeholder con asset reali e rifinire il contenuto definitivo
+- Ultima azione completata: configurato deploy automatico GitHub Pages via workflow
+- Prossima azione consigliata: controllare URL pubblico Pages e rifinire il contenuto definitivo
