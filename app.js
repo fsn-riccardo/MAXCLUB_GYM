@@ -141,7 +141,23 @@ if (bookingDateInput && bookingTimeSelect) {
   };
 
   bookingDateInput.min = getNextAvailableDate();
+  if (!bookingDateInput.value) {
+    bookingDateInput.value = bookingDateInput.min;
+  }
+
   bookingDateInput.addEventListener('change', () => renderTimeOptions(bookingDateInput.value));
   bookingDateInput.addEventListener('input', () => renderTimeOptions(bookingDateInput.value));
+
+  const syncTimeOptions = () => {
+    if (bookingDateInput.value) {
+      renderTimeOptions(bookingDateInput.value);
+    }
+  };
+
+  bookingTimeSelect.addEventListener('focus', syncTimeOptions);
+  bookingTimeSelect.addEventListener('pointerdown', syncTimeOptions);
+  bookingTimeSelect.addEventListener('touchstart', syncTimeOptions, { passive: true });
+  bookingTimeSelect.addEventListener('click', syncTimeOptions);
+
   renderTimeOptions(bookingDateInput.value);
 }
