@@ -476,8 +476,10 @@ textarea:focus-visible {
 }
 
 .social-link svg {
-  width: 0.78rem;
-  height: 0.78rem;
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 
 .site-footer {
