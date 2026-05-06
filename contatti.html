@@ -6,7 +6,7 @@
   <title>Contatti | Palestra Max Club</title>
   <meta name="description" content="Contatta Palestra Max Club a Campo San Martino, chiama in un tap e trova la palestra sulla mappa.">
   <meta name="theme-color" content="#050505">
-  <link rel="icon" href="assets/LOGO_MAX.jpeg" type="image/jpeg">
+  <link rel="icon" href="assets/LOGO_MAX.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="shell nav-shell">
       <a class="brand" href="index.html" aria-label="Palestra Max Club home">
-        <img class="brand-logo" src="assets/LOGO_MAX.jpeg" alt="Logo Palestra Max Club" width="96" height="96" loading="eager">
+        <img class="brand-logo" src="assets/LOGO_MAX.png" alt="Logo Palestra Max Club" width="128" height="128" loading="eager">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
         <span></span>
@@ -44,22 +44,37 @@
     <section class="section section-tight">
       <div class="shell contact-layout">
         <section class="contact-card reveal">
-          <p class="eyebrow">Richiedi informazioni</p>
-          <h2>Form rapido</h2>
-          <form class="contact-form" id="contact-form">
+          <p class="eyebrow">Prenota la tua prova</p>
+          <h2>Scegli giorno e orario per la tua visita gratuita</h2>
+          <form class="contact-form booking-form" id="booking-form">
             <label>
               Nome
-              <input type="text" placeholder="Il tuo nome" required>
+              <input type="text" name="name" placeholder="Il tuo nome" required>
             </label>
             <label>
               Email
-              <input type="email" placeholder="nome@email.it" required>
+              <input type="email" name="email" placeholder="nome@email.it" required>
             </label>
             <label>
-              Messaggio
-              <textarea rows="5" placeholder="Vorrei prenotare una visita o chiedere informazioni sugli abbonamenti." required></textarea>
+              Telefono
+              <input type="tel" name="phone" placeholder="333 000 0000" required>
             </label>
-            <button class="button" type="submit">Invia richiesta</button>
+            <label>
+              Giorno desiderato
+              <input type="date" name="bookingDate" id="booking-date" required>
+            </label>
+            <label>
+              Orario desiderato
+              <select name="bookingTime" id="booking-time" required>
+                <option value="">Seleziona prima una data</option>
+              </select>
+            </label>
+            <p class="booking-hint">Le prove gratuite si prenotano dal lunedi al sabato, nelle fasce orarie di apertura della palestra.</p>
+            <label>
+              Nota facoltativa
+              <textarea rows="4" name="message" placeholder="Scrivi qui eventuali preferenze o richieste particolari."></textarea>
+            </label>
+            <button class="button" type="submit">Invia prenotazione</button>
           </form>
         </section>
 
@@ -89,12 +104,12 @@
     </section>
   </main>
 
-  <a class="floating-cta" href="#contact-form">Prenota la tua prova gratuita</a>
+  <a class="floating-cta" href="#booking-form">Prenota la tua prova gratuita</a>
 
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <img class="footer-logo" src="assets/LOGO_MAX.jpeg" alt="Logo Palestra Max Club" width="96" height="96" loading="lazy">
+        <img class="footer-logo" src="assets/LOGO_MAX.png" alt="Logo Palestra Max Club" width="128" height="128" loading="lazy">
         <p class="footer-brand">Palestra Max Club Associazione Sportiva Dilettantistica</p>
         <p class="footer-copy">Passa in palestra, chiamaci o scrivici. Ti aspettiamo a Campo San Martino.</p>
       </div>
