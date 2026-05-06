@@ -67,10 +67,14 @@ const bookingTimeSelect = document.querySelector('#booking-time');
 
 if (bookingDateInput && bookingTimeSelect) {
   const timeSlots = [];
+  const bookingHint = document.querySelector('.booking-hint');
 
-  for (let hour = 6; hour <= 21; hour += 1) {
+  for (let hour = 6; hour <= 22; hour += 1) {
     timeSlots.push(`${String(hour).padStart(2, '0')}:00`);
-    timeSlots.push(`${String(hour).padStart(2, '0')}:30`);
+
+    if (hour !== 22) {
+      timeSlots.push(`${String(hour).padStart(2, '0')}:30`);
+    }
   }
 
   const formatDateForInput = (date) => date.toISOString().split('T')[0];
@@ -87,9 +91,15 @@ if (bookingDateInput && bookingTimeSelect) {
 
   const renderTimeOptions = (selectedDate) => {
     bookingTimeSelect.innerHTML = '';
+    bookingTimeSelect.disabled = true;
 
     if (!selectedDate) {
       bookingTimeSelect.innerHTML = '<option value="">Seleziona prima una data</option>';
+
+      if (bookingHint) {
+        bookingHint.textContent = 'Scegli prima il giorno desiderato per visualizzare gli orari disponibili.';
+      }
+
       return;
     }
 
@@ -99,15 +109,27 @@ if (bookingDateInput && bookingTimeSelect) {
       bookingTimeSelect.innerHTML = '<option value="">La domenica non e prenotabile</option>';
       bookingDateInput.setCustomValidity('La domenica non e disponibile per la prova gratuita.');
       bookingTimeSelect.setCustomValidity('Scegli un giorno dal lunedi al sabato.');
+
+      if (bookingHint) {
+        bookingHint.textContent = 'La domenica non e disponibile per la prova gratuita. Scegli un giorno dal lunedi al sabato.';
+      }
+
       return;
     }
 
     bookingDateInput.setCustomValidity('');
     bookingTimeSelect.setCustomValidity('');
+    bookingTimeSelect.disabled = false;
+
+    if (bookingHint) {
+      bookingHint.textContent = 'Seleziona ora la fascia oraria desiderata tra quelle disponibili.';
+    }
 
     const placeholder = document.createElement('option');
     placeholder.value = '';
     placeholder.textContent = 'Seleziona un orario';
+    placeholder.selected = true;
+    placeholder.disabled = true;
     bookingTimeSelect.appendChild(placeholder);
 
     timeSlots.forEach((slot) => {
@@ -120,5 +142,6 @@ if (bookingDateInput && bookingTimeSelect) {
 
   bookingDateInput.min = getNextAvailableDate();
   bookingDateInput.addEventListener('change', () => renderTimeOptions(bookingDateInput.value));
+  bookingDateInput.addEventListener('input', () => renderTimeOptions(bookingDateInput.value));
   renderTimeOptions(bookingDateInput.value);
 }
