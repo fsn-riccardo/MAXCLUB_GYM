@@ -120,7 +120,7 @@ button,
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0;
   min-width: 0;
 }
 
@@ -131,12 +131,6 @@ button,
   border-radius: 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: #000000;
-}
-
-.brand-text {
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
 }
 
 .nav-toggle {
@@ -475,6 +469,16 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
+.footer-logo {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 0.75rem;
+  background: #000000;
+}
+
 .footer-copy {
   margin: 0;
   color: var(--muted);
@@ -753,7 +757,6 @@ textarea {
   }
 
   .brand {
-    gap: 0.7rem;
     max-width: calc(100% - 4.25rem);
   }
 
@@ -761,11 +764,6 @@ textarea {
     width: 2.65rem;
     height: 2.65rem;
     border-radius: 0.75rem;
-  }
-
-  .brand-text {
-    font-size: 0.88rem;
-    line-height: 1.15;
   }
 
   .site-nav a {
